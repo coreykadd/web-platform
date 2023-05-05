@@ -1,0 +1,8 @@
+<div class="game-selection-container">
+    <h1>Choose your game</h1>
+
+    <mat-grid-list [cols]="breakpoint" rowHeight="2:1" gutterSize="1rem" class="game-list" (window:resize)="onResize($event)">
+        <mat-grid-tile class="game-item" [class]="game.class" *ngFor="let game of gameList" role="link" [title]="game.name">
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

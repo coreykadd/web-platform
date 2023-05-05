@@ -1,0 +1,40 @@
+.game-selection-container {
+    margin: 2rem;
+}
+
+.game-list {
+    
+}
+
+.game-item {
+    border: 1px solid black;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+
+.black-desert-online {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.75) 100%), url('/assets/images/bdo.jpg');
+
+    &:hover {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.75) 100%), url('/assets/images/bdo.jpg');
+    }
+}
+
+.monster-hunter-rise {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.75) 100%), url('/assets/images/monsterHunterRise.jpg');
+
+    &:hover {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.75) 100%), url('/assets/images/monsterHunterRise.jpg');
+    }
+}
+
+.path-of-exile {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.75) 100%), url('/assets/images/pathOfExile.jpg');
+
+    &:hover {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.75) 100%), url('/assets/images/pathOfExile.jpg');
+    }
+}

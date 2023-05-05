@@ -1,0 +1,5 @@
+@import './theme.scss';
+
+$primary: mat-color($custom-primary);
+$primary-lighter: mat-color($custom-primary, lighter);
+$primary-darker: mat-color($custom-primary, darker);
