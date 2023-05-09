@@ -1,0 +1,45 @@
+version: '3.0'
+
+networks:
+  my_network:
+
+services:
+  backend:
+    container_name: backend
+    build:
+      context: ./back-end
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      MONGO_URI: mongodb://mongo:27017:mywebapp
+    ports:
+      - '3000:3000'
+    depends_on:
+      - mongo
+    networks:
+      - my_network
+
+  frontend:
+    container_name: frontend
+    build:
+      context: ./front-end
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - '80:80'
+    environment: 
+      NODE_ENV: development
+      API_URL: http://backend:3000/api
+    networks:
+      - my_network
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    restart: unless-stopped
+    volumes:
+      - './data:/data/db'
+    networks:
+      - my_network
+  
