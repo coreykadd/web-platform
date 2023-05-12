@@ -12,14 +12,17 @@ export class GameSelectionComponent implements OnInit {
         {
             name: 'Black Desert Online',
             class: 'black-desert-online',
+            link: 'bdo',
         },
         {
             name: 'Path Of Exile',
             class: 'path-of-exile',
+            link: 'poe',
         },
         {
             name: 'Monster Hunter Rise',
             class: 'monster-hunter-rise',
+            link: 'mhr'
         }
     ]
 

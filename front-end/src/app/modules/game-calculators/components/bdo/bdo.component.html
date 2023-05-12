@@ -1,0 +1,37 @@
+<div class="bdo-container">
+    <mat-tab-group class="bdo-tab-group" mat-stretch-tabs>
+        <mat-tab label="Gearscore">
+
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>Gear Score Calculator</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <form [formGroup]="gearscoreForm">
+                        <mat-form-field appearance="fill">
+                            <mat-label>AP</mat-label>
+                            <input matInput formControlName="ap" type="number">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>AAP</mat-label>
+                            <input matInput formControlName="aap" type="number">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>DP</mat-label>
+                            <input matInput formControlName="dp" type="number">
+                        </mat-form-field>
+                    </form>
+                    <button mat-raised-button color="primary" (click)="calculateGearscore()">Calculate Gear Score</button>
+                    <div *ngIf="gearscore" class="result">Gear Score: {{ gearscore }}</div>
+                </mat-card-content>
+            </mat-card>
+
+
+
+
+
+        </mat-tab>
+        <mat-tab label="Grind spots"> Grind spots </mat-tab>
+        <mat-tab label="Caphras"> Caphras </mat-tab>
+    </mat-tab-group>
+</div>
