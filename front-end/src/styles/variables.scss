@@ -3,3 +3,5 @@
 $primary: mat-color($custom-primary);
 $primary-lighter: mat-color($custom-primary, lighter);
 $primary-darker: mat-color($custom-primary, darker);
+
+$full-height: calc(100vh - 64px);

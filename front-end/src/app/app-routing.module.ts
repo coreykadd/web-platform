@@ -15,6 +15,10 @@ const routes: Routes = [
     {
         path: 'games',
         loadChildren: () => import('./modules/game-calculators/game-calculators.module').then((module) => module.GameCalculatorsModule),
+    },
+    {
+        path: 'about-me',
+        loadChildren: () => import('./modules/about-me/about-me.module').then(module => module.AboutMeModule),
     }
 ];
 

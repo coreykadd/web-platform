@@ -3,7 +3,7 @@
 
     <div>
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
-            <mat-icon>more_vert</mat-icon>
+            <mat-icon>menu</mat-icon>
         </button>
 
         <mat-menu #menu="matMenu">
@@ -17,7 +17,8 @@
                 <span>Game calculators</span>
             </a>
 
-            <a mat-menu-item>
+            <a mat-menu-item routerLink="/about-me">
+                <mat-icon>info</mat-icon>
                 <span>About me</span>
             </a>
         </mat-menu>
