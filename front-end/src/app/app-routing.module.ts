@@ -13,8 +13,12 @@ const routes: Routes = [
         component: HomeComponent,
     },
     {
-        path: 'games',
+        path: 'game-calculators',
         loadChildren: () => import('./modules/game-calculators/game-calculators.module').then((module) => module.GameCalculatorsModule),
+    },
+    {
+        path: 'games',
+        loadChildren: () => import('./modules/games/games.module').then((module) => module.GamesModule),
     },
     {
         path: 'about-me',

@@ -1,0 +1,10 @@
+<div class="match-two-container">
+    <h1>Match two card game</h1>
+
+    <button (click)="handleGenerateCards()" *ngIf="cards.length === 0">Start game</button>
+    <button (click)="handleShuffleCards()" *ngIf="cards.length > 0">Shuffle cards</button>
+
+    <div class="card-grid">
+        <app-match-two-card *ngFor="let card of cards" [card]=card (selectedCard)="handleSelectedCard($event)"></app-match-two-card>
+    </div>
+</div>

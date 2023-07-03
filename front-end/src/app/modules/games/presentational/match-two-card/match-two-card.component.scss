@@ -1,0 +1,49 @@
+.mat-card {
+  width: 120px;
+  height: 220px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background: linear-gradient(#000, #444);
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  color: transparent;
+
+  &.selected {
+    color: #000;
+    background: #fff;
+  }
+
+  &.red {
+    color: red;
+  }
+}
+
+.mat-card-content {
+  text-align: center;
+}
+
+.card-suit {
+  font-size: 24px;
+  line-height: 1;
+  position: absolute;
+}
+
+.card-suit.top-right {
+  top: 10px;
+  right: 10px;
+}
+
+.card-suit.bottom-left {
+  bottom: 10px;
+  left: 10px;
+}
+
+.card-rank {
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
