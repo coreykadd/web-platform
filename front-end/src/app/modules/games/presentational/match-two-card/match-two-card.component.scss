@@ -1,26 +1,22 @@
 .mat-card {
   width: 120px;
   height: 220px;
-  border: 1px solid #000;
-  border-radius: 10px;
-  background: linear-gradient(#000, #444);
-  position: relative;
   cursor: pointer;
-  user-select: none;
-  color: transparent;
-
-  &.selected {
-    color: #000;
-    background: #fff;
-  }
-
-  &.red {
-    color: red;
-  }
+  perspective: 600px;
+  padding: 0rem;
 }
 
 .mat-card-content {
   text-align: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  position: relative;
+
+  &.selected {
+    transform: rotateY(180deg);
+  }
 }
 
 .card-suit {
@@ -46,4 +42,29 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.back,
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+
+.back {
+  background: linear-gradient(#000, #444);
+}
+
+.front {
+  background-color: #eee;
+  color: black;
+  transform: rotateY(180deg);
+
+  &.red {
+    color: red;
+  }
 }

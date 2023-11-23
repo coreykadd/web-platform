@@ -1,7 +1,13 @@
-<mat-card class="card" [class.red]="isRed && card.isSelected" [class.selected]="card.isSelected" (click)="handleSelectCard()">
-    <mat-card-content>
-        <span class="card-suit top-right">{{ card.suit }}</span>
-        <span class="card-rank">{{ card.rank }}</span>
-        <span class="card-suit bottom-left">{{ card.suit }}</span>
+<mat-card class="card" (click)="handleSelectCard()">
+    <mat-card-content [class.selected]="card.isSelected">
+        <div class="front" [class.red]="isRed">
+            <span class="card-suit top-right">{{ card.suit }}</span>
+            <span class="card-rank">{{ card.rank }}</span>
+            <span class="card-suit bottom-left">{{ card.suit }}</span>
+        </div>
+
+        <div class="back">
+
+        </div>
     </mat-card-content>
 </mat-card>
