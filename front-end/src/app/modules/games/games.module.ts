@@ -5,13 +5,15 @@ import { GamesRoutingModule } from './games.routing';
 import { MatchTwoComponent } from './components/match-two/match-two.component';
 import { MatchTwoCardComponent } from './presentational/match-two-card/match-two-card.component';
 import { MaterialModule } from 'src/app/material.module';
+import { ColorSequenceComponent } from './components/color-sequence/color-sequence.component';
 
 
 @NgModule({
     declarations: [
         GameListComponent,
         MatchTwoComponent,
-        MatchTwoCardComponent
+        MatchTwoCardComponent,
+        ColorSequenceComponent
     ],
     imports: [
         CommonModule,

@@ -1,0 +1,16 @@
+<div class="color-sequence">
+    <h1>Color sequence</h1>
+
+    <button (click)="handleGameStart()">Start</button>
+    <p>Level: {{ level }}</p>
+
+    <div class="sequence-game-container">
+        <div class="sequence-square" [ngClass]="currentSequenceColor"></div>
+
+        <div class="sequence-controls">
+            <button class="sequence-square" [ngClass]="color" *ngFor="let color of sequenceControls" (click)="handleColorSelection(color)"></button>
+        </div>
+    </div>
+
+    <p>{{ endgameMessage }}</p>
+</div>
