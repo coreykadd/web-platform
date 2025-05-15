@@ -1,0 +1,26 @@
+.platform {
+   position: relative;
+    width: 500px;
+    height: 200px;
+    overflow: hidden;
+    background: #eef;
+
+    .character {
+        background: black;
+        position: absolute;
+        // transform: translateX(-50%);
+    }
+
+    .obstacle {
+        background: red;
+        position: absolute;
+    }
+
+    .ground {
+        background: #8B4513;
+        height: 20px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+}

@@ -6,6 +6,7 @@ import { MatchTwoComponent } from './components/match-two/match-two.component';
 import { MatchTwoCardComponent } from './presentational/match-two-card/match-two-card.component';
 import { MaterialModule } from 'src/app/material.module';
 import { ColorSequenceComponent } from './components/color-sequence/color-sequence.component';
+import { PlatformerComponent } from './components/platformer/platformer.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ColorSequenceComponent } from './components/color-sequence/color-sequen
         GameListComponent,
         MatchTwoComponent,
         MatchTwoCardComponent,
-        ColorSequenceComponent
+        ColorSequenceComponent,
+        PlatformerComponent
     ],
     imports: [
         CommonModule,

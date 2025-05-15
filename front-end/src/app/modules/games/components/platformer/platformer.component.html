@@ -1,0 +1,31 @@
+<div class="platformer-game">
+  <div class="game-container">
+    <div class="game-canvas" #gameCanvas></div>
+  </div>
+  <div class="controls">
+    <button (click)="handleStartGame()">Start Game</button>
+    <button (click)="handleStopGame()">Stop Game</button>
+  </div>
+  <div class="score">
+    <p>Score: {{ score }}</p>
+    <p>High Score: {{ highScore }}</p>
+  </div>
+
+    <div class="platformer-game-instructions">
+      <h2>Instructions</h2>
+      <p>Use the arrow keys to move the character.</p>
+      <p>Press the spacebar to jump.</p>
+      <p>Avoid the obstacles and collect coins to increase your score.</p>
+      <p>Try to beat your high score!</p>
+      <p>Good luck!</p>
+    </div>  
+
+    <div class="platform" *ngIf="isGameStarted">
+        {{ score }}
+      <div class="character" [ngStyle]="{ left: character.position.x + 'px', bottom: character.position.y + 'px', width: character.size.width + 'px', height: character.size.height + 'px' }"></div>
+      <div class="obstacle" *ngFor="let obstacle of obstacles" [ngStyle]="{ left: obstacle.position.x + 'px', bottom: obstacle.position.y + 'px', width: obstacle.size.width + 'px', height: obstacle.size.height + 'px' }"></div>
+      <div class="ground"></div>
+    </div>
+
+
+</div>
